@@ -20,23 +20,23 @@ When(/^User fills in a valid full name$/, () => {
 });
 
 When(/^User fills in a valid business name$/, () => {
-	cy.log('Hafsat', 'Yusuff')
+	cy.typeAValue(sel.basicDetailsPage.bizNameField, faker.company.name())
 });
 
 When(/^User fills in a valid business email$/, () => {
-	cy.log('Gambo', 'Usman')
+	cy.typeAValue(sel.basicDetailsPage.bizEmailField, 'haffy@yopmail.com')
 });
 
 When(/^User fills in a valid phone number$/, () => {
-	cy.log('Ruth', 'Nyem')
+	cy.typeAValue(sel.basicDetailsPage.bizPhoneNum, faker.phone.number('+23470########'))
 });
 
 When(/^User fills in a valid business registration number$/, () => {
-	cy.log('Segun', 'Durojaiye')
+	cy.typeAValue(sel.basicDetailsPage.bizRegNum, faker.commerce.isbn())
 });
 
 When(/^User Clicks the Next Button$/, () => {
-	cy.log('Salman', 'Muhammad')
+	cy.clickElement(sel.basicDetailsPage.nextButton)
 });
 
 When(/^User fills in a valid website name$/, () => {
